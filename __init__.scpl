@@ -1,0 +1,17 @@
+diff --git a/libs/mathlib/__init__.scpl b/libs/mathlib/__init__.scpl
+new file mode 100644
+index 0000000000000000000000000000000000000000..67d65c7ca9e4c7a98c7107a4b42784e0d394d918
+--- /dev/null
++++ b/libs/mathlib/__init__.scpl
+@@ -0,0 +1,11 @@
++-- Math Library for SCPL (safe non-recursive helpers)
++
++(function pi () 3.141592653589793)
++(function square (x) (* x x))
++(function cube (x) (* x x x))
++(function avg (a b) (/ (+ a b) 2))
++(function clamp (value min max) (if (< value min) min) (else (if (> value max) max) (else value)))
++(function percent (part whole) (* (/ part whole) 100))
++(function distance2d (x1 y1 x2 y2) (sqrt (+ (^ (- x2 x1) 2) (^ (- y2 y1) 2))))
++(function circle-area (r) (* (call pi) (* r r)))
++(function circle-length (r) (* 2 (* (call pi) r)))
